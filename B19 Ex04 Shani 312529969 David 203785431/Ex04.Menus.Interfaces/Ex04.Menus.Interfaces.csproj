@@ -40,11 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionItems\DigitsCounter.cs" />
-    <Compile Include="ActionItems\IActionItem.cs" />
-    <Compile Include="ActionItems\DateDisplayer.cs" />
-    <Compile Include="ActionItems\TimeDisplayer.cs" />
-    <Compile Include="ActionItems\VersionDisplayer.cs" />
+    <Compile Include="IActionItem.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="ActionItem.cs" />
     <Compile Include="MenuItem.cs" />

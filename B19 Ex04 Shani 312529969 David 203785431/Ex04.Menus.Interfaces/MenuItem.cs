@@ -46,23 +46,30 @@ namespace Ex04.Menus.Interfaces
             }
         }
 
-        public MenuItem(string i_Title)
+        public MenuItem()
         {
             m_ChildrenItems = new Dictionary<int, MenuItem>();
-            r_ParentMenu = new Dictionary<int, MenuItem>();
-            m_Title = i_Title;
         }
 
-        public MenuItem(string i_Title, Dictionary<int, MenuItem> i_Parent)
+        public MenuItem(string i_Title, Dictionary<int, MenuItem> i_Parent = null)
         {
             m_ChildrenItems = new Dictionary<int, MenuItem>();
             m_Title = i_Title;
-            r_ParentMenu = i_Parent;
+            if (i_Parent != null)
+            {
+                r_ParentMenu = i_Parent;
+            }
         }
 
         public void AddChild(MenuItem i_Child)
         {
-            m_ChildrenItems[m_ChildrenItems.Count + 1] = i_Child;
+            if (m_ChildrenItems.Count == 0)
+            {
+                MenuItem back = new MenuItem(k_Back);
+                m_ChildrenItems[k_BackIndex] = back;
+            }
+
+            m_ChildrenItems[m_ChildrenItems.Count] = i_Child;
         }
     }
 }

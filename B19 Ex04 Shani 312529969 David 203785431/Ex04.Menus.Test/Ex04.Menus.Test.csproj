@@ -37,6 +37,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Methods\DateDisplayer.cs" />
+    <Compile Include="Methods\DigitsCounter.cs" />
+    <Compile Include="Methods\TimeDisplayer.cs" />
+    <Compile Include="Methods\VersionDisplayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

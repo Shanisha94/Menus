@@ -14,30 +14,27 @@ namespace Ex04.Menus.Interfaces
         public MainMenu()
         {
             m_MenuTree = new Dictionary<int, MenuItem>();
+            MenuItem exitItem = new MenuItem(k_Exit);
+            m_MenuTree[k_BackOrExitIndex] = exitItem;
         }
 
         public void Show()
         {
             string title = "Welcome! Please choose an item from the menu";
             Dictionary<int, MenuItem> currentLevel = m_MenuTree;
-            Dictionary<int, MenuItem> previousLevel = m_MenuTree;
-            Stack<Dictionary<int, MenuItem>> levelsStack = new Stack<Dictionary<int, MenuItem>>();
-
             printCurrentLevel(m_MenuTree, title);
             getUserChoice(currentLevel, out int userChoice);
             while (!(userChoice == k_BackOrExitIndex && currentLevel == m_MenuTree))
             {
-                previousLevel = currentLevel;
                 Console.Clear();
                 if(userChoice == k_BackOrExitIndex)
                 {
-                    currentLevel = levelsStack.Pop();
                     title = k_Back;
+                    currentLevel = currentLevel[1].Parent;
                 }
                 else if (currentLevel[userChoice].Children.Count == 0)
                 {
                     ((ActionItem)currentLevel[userChoice]).Execute();
-                    previousLevel = levelsStack.Pop();
                 }
                 else
                 {
@@ -46,7 +43,6 @@ namespace Ex04.Menus.Interfaces
                 }
 
                 printCurrentLevel(currentLevel, title);
-                levelsStack.Push(previousLevel);
                 getUserChoice(currentLevel, out userChoice);
             }
 
@@ -57,8 +53,6 @@ namespace Ex04.Menus.Interfaces
         {
             StringBuilder buildMenu = new StringBuilder();
             buildMenu.AppendFormat("{0}{1}", i_Title, Environment.NewLine);
-            string firstIndex = i_CurrentLevel == m_MenuTree ? k_Exit : k_Back;
-            buildMenu.AppendFormat("{0}. {1}{2}", k_BackOrExitIndex, firstIndex, Environment.NewLine);
             foreach (KeyValuePair<int, MenuItem> item in i_CurrentLevel)
             {
                 buildMenu.AppendFormat("{0}. {1}{2}", item.Key, item.Value.Title, Environment.NewLine);
@@ -91,17 +85,21 @@ namespace Ex04.Menus.Interfaces
             return isValid;
         }
 
-        public void AddMenuItem(string i_ItemTitle, string i_ParentItem = "", IActionItem i_Action = null)
+        public void AddMenuItem(string i_ItemTitle, string i_ParentItem = "", object i_Action = null)
         {
             if (i_ParentItem == string.Empty) // add to root level
             {
                 if(i_Action == null)
                 {
-                    m_MenuTree[m_MenuTree.Count + 1] = new MenuItem(i_ItemTitle);
+                    m_MenuTree[m_MenuTree.Count] = new MenuItem(i_ItemTitle);
                 }
                 else
                 {
-                    m_MenuTree[m_MenuTree.Count + 1] = new ActionItem(i_ItemTitle, i_Action);
+                    IActionItem action = i_Action as IActionItem;
+                    if (action != null)
+                    {
+                        m_MenuTree[m_MenuTree.Count] = new ActionItem(i_ItemTitle, action);
+                    }
                 }
             }
             else
@@ -116,7 +114,11 @@ namespace Ex04.Menus.Interfaces
                     }
                     else
                     {
-                        parentItem.AddChild(new ActionItem(i_ItemTitle, i_Action, parentMenu));
+                        IActionItem action = i_Action as IActionItem;
+                        if (action != null)
+                        {
+                            parentItem.AddChild(new ActionItem(i_ItemTitle, action, parentMenu));
+                        }
                     }
                 }
             }       
