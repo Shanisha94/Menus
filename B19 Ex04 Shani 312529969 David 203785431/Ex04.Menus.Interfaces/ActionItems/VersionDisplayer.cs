@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces.ActionItems
 {
-    class ShowDate : IActionItem
+    public class VersionDisplayer : IActionItem
     {
         public void DoAction()
         {
-            Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy"));
+            Console.WriteLine("Version: 19.2.4.32");
         }
     }
 }

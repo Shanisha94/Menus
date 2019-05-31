@@ -1,0 +1,9 @@
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.pdb
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csprojAssemblyReference.cache
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CoreCompileInputs.cache
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CopyComplete
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb

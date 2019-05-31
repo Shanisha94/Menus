@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    internal interface IActionItem
+    public interface IActionItem
     {
         void DoAction();
     }

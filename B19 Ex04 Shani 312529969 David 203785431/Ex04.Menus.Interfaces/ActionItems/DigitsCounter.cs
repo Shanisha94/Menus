@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces.ActionItems
 {
-    class CountDigits : IActionItem
+    public class DigitsCounter : IActionItem
     {
         public void DoAction()
         {

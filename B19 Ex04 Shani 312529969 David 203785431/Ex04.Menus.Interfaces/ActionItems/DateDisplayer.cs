@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces.ActionItems
 {
-    class ShowTime : IActionItem
+    public class DateDisplayer : IActionItem
     {
         public void DoAction()
         {
-            Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+            Console.WriteLine("Date: {0}", DateTime.Now.ToString("MM/dd/yyyy"));
         }
     }
 }

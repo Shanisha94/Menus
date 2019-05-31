@@ -1,0 +1,5 @@
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Shani\Documents\C#\Menus\B19 Ex04 Shani 312529969 David 203785431\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
