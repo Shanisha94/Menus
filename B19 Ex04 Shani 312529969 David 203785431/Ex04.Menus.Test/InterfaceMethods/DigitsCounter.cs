@@ -18,9 +18,9 @@ namespace Ex04.Menus.Test
         private int countDigits(string i_Input)
         {
             int counter = 0;
-            foreach(char character in i_Input)
+            foreach (char character in i_Input)
             {
-                if(char.IsDigit(character))
+                if (char.IsDigit(character))
                 {
                     counter++;
                 }

@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    class MenuItem
+    internal class MenuItem
     {
         private const int k_BackIndex = 0;
         private const string k_Back = "Back";
+        private readonly Dictionary<int, MenuItem> r_ParentMenu;
         private string m_Title;
         private Dictionary<int, MenuItem> m_ChildrenItems;
-        private readonly Dictionary<int, MenuItem> r_ParentMenu;
 
         public string Title
         {

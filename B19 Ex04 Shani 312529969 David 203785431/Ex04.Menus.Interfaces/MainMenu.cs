@@ -9,7 +9,7 @@ namespace Ex04.Menus.Interfaces
         private const int k_BackOrExitIndex = 0;
         private const string k_Back = "Back";
         private const string k_Exit = "Exit";        
-        Dictionary<int, MenuItem> m_MenuTree;
+        private Dictionary<int, MenuItem> m_MenuTree;
 
         public MainMenu()
         {
@@ -27,7 +27,7 @@ namespace Ex04.Menus.Interfaces
             while (!(userChoice == k_BackOrExitIndex && currentLevel == m_MenuTree))
             {
                 Console.Clear();
-                if(userChoice == k_BackOrExitIndex)
+                if (userChoice == k_BackOrExitIndex)
                 {
                     title = k_Back;
                     currentLevel = currentLevel[1].Parent;
@@ -87,9 +87,9 @@ namespace Ex04.Menus.Interfaces
 
         public void AddMenuItem(string i_ItemTitle, string i_ParentItem = "", object i_Action = null)
         {
-            if (i_ParentItem == string.Empty) // add to root level
-            {
-                if(i_Action == null)
+            if (i_ParentItem == string.Empty)
+            { // add to root level
+                if (i_Action == null)
                 {
                     m_MenuTree[m_MenuTree.Count] = new MenuItem(i_ItemTitle);
                 }
@@ -128,7 +128,7 @@ namespace Ex04.Menus.Interfaces
         {
             Dictionary<int, MenuItem> subMenu = null;
 
-            foreach(KeyValuePair<int, MenuItem> item in m_MenuTree)
+            foreach (KeyValuePair<int, MenuItem> item in m_MenuTree)
             {
                 if (item.Value.Title == i_ItemInMenu)
                 {
